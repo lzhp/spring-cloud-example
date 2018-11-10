@@ -6,9 +6,8 @@
 package cn.customs.h2018.sample.remoteapi;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Date: 2018-04-04 22:19:45.
@@ -20,10 +19,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface HelloClient {
 
 
-      @RequestMapping(method = RequestMethod.GET, value = "/hello")
+      @GetMapping(value = "/hello")
       String getHello();
       
-      @RequestMapping(path = "/api/products/{id}", method = RequestMethod.GET)
+      @GetMapping(path = "/api/products/{id}")
       public String getProductFromRestAPI(@PathVariable(value = "id") String id);
 
 

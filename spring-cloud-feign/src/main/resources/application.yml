@@ -1,5 +1,11 @@
 server:
-  port: 8000
+  port: 8001
+  
+#feign:
+#  client:
+#    config:
+#      stores:
+#        errorDecoder: cn.customs.h2018.sample.FeignErrorDecoder 
   
 #spring:
 #  datasource:
